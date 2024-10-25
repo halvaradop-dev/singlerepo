@@ -1,7 +1,7 @@
 {
   "name": "@halvaradop/singlerepo",
   "version": "1.0.0",
-  "description": "Singlerepo that contains the test code and configurations",
+  "description": "A single repository containing test code and configurations for streamlined development",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -10,6 +10,10 @@
     "test:watch": "vitest --watch"
   },
   "keywords": [],
+  "homepage": "https://github.com/halvaradop-dev/singlerepo",
+  "bugs": {
+    "url": "https://github.com/halvaradop-dev/singlerepo/issues"
+  },
   "author": "Hernan Alvarado <hernanvid123@gmail.com>",
   "license": "ISC",
   "devDependencies": {
