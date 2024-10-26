@@ -1,6 +1,6 @@
 {
   "name": "@halvaradop/singlerepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A single repository containing test code and configurations for streamlined development",
   "type": "module",
   "scripts": {
