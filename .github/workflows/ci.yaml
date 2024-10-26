@@ -1,8 +1,8 @@
 name: ci
 
 on:
-  pull_request:
-    types: [opened, synchronize, closed]
+  # pull_request:
+    # types: [opened, synchronize, closed]
   push:
     branches: 
       - master
@@ -20,7 +20,7 @@ jobs:
       # - uses: pnpm/action-setup@v4
       # - run: pnpm install
       # - run: pnpm build
-      
+
   deploy-to-development:
     runs-on: ubuntu-latest
     steps:
@@ -28,6 +28,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
       - uses: pnpm/action-setup@v4
       - run: pnpm install
-      - run: pnpm publish --access public --no-git-checks
+      - run: pnpm build
+      - name: publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: pnpm publish --access public --no-git-checks
